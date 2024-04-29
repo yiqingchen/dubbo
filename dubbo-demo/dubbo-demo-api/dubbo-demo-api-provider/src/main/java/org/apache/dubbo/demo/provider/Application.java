@@ -61,6 +61,8 @@ public class Application {
         service.setApplication(new ApplicationConfig("dubbo-demo-api-provider"));
         service.setRegistry(new RegistryConfig("zookeeper://127.0.0.1:2181"));
         service.setMetadataReportConfig(new MetadataReportConfig("zookeeper://127.0.0.1:2181"));
+
+        //注册服务实例到zookeeper
         service.export();
 
         System.out.println("dubbo service started");
